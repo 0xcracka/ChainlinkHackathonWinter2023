@@ -1,0 +1,102 @@
+/* Home.module.css */
+.container {
+  font-family: "Roboto", sans-serif; /* Primary font */
+  color: #343a40; /* Charcoal Grey for text */
+  background-color: #ffffff; /* Assuming a white background */
+  padding: 0 2rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  background-color: #007bff; /* Electric Blue for header background */
+  color: white;
+}
+
+.main {
+  padding: 2rem 0;
+}
+
+.footer {
+  padding: 2rem 0;
+  /* background-color: #343a40; Charcoal Grey for footer */
+  color: white;
+  text-align: center;
+}
+
+/* Additional styles as needed */
+.mainContent {
+  text-align: center;
+  padding: 50px;
+  box-sizing: border-box;
+}
+
+.heroSection {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.button {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.primaryButton {
+  background-color: #0052cc;
+  color: white;
+}
+
+.primaryButton:hover {
+  background-color: #003d99;
+}
+
+.secondaryButton {
+  background-color: transparent;
+  color: #0052cc;
+  border: 1px solid #0052cc;
+}
+
+.secondaryButton:hover {
+  background-color: #f0f0f0;
+}
+
+.gradient {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(334deg, #6b97f7, #7525e2, #f7137e);
+  background-size: 180% 180%;
+  animation: gradient-animation 6s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

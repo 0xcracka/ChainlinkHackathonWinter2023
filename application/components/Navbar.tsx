@@ -1,67 +1,53 @@
+import { WhitebitNetwork } from "@thirdweb-dev/chains";
+import { ConnectWallet } from "@thirdweb-dev/react";
 import Image from "next/image";
 import Link from "next/link";
 
 export function Nav() {
   return (
-    <div className="w-full flex items-center justify-center fixed top-0 left-0 z-50 rounded-xl shadow-md backdrop-blur-lg">
-      <nav className="flex items-center justify-between w-full max-w-7xl py-5 px-4 border-b-2">
-        <div className="flex items-center gap-3 transition duration-150">
-          <Link href="/" className="flex items-center">
-            <Image src="/logo.png" width={42} height={42} alt="EVM Kit Logo" />
-          </Link>
-
-          <div className="flex ml-3 gap-6">
-            <Link
-              href="https://evmkit.com/"
-              target="_blank"
-              className="text-white text-base font-medium hover:text-white transition-colors duration-300"
-            >
-              Home
+    <nav className="bg-white shadow-md">
+      <div className="container mx-auto px-6 py-3 flex justify-between items-center">
+        <Link href="/" passHref>
+          <span className="font-bold text-xl text-blue-600 cursor-pointer">
+            DataLynk
+          </span>
+        </Link>
+        <div className="flex items-center">
+          <div className="hidden md:flex space-x-4">
+            <Link href="/" passHref>
+              <span className="text-gray-800 hover:text-blue-600 cursor-pointer">
+                Home
+              </span>
             </Link>
-            <Link
-              href="https://docs.evmkit.com/"
-              target="_blank"
-              className="text-white text-base font-medium hover:text-white transition-colors duration-300"
-            >
-              Docs
+            <Link href="/products" passHref>
+              <span className="text-gray-800 hover:text-blue-600 cursor-pointer">
+                Products
+              </span>
+            </Link>
+            <Link href="/about" passHref>
+              <span className="text-gray-800 hover:text-blue-600 cursor-pointer">
+                About
+              </span>
+            </Link>
+            <Link href="/pricing" passHref>
+              <span className="text-gray-800 hover:text-blue-600 cursor-pointer">
+                Pricing
+              </span>
             </Link>
           </div>
-        </div>
-
-        <div className="flex gap-4 items-center">
-          <Link
-            href="https://github.com/jarrodwatts/evmkit"
-            target="_blank"
-            className="text-white hover:text-white transition-colors duration-300"
-          >
-            <Image src="/github.png" width={24} height={24} alt="Github icon" />
-          </Link>
-          <Link
-            href="https://twitter.com/jarrodwattsdev"
-            target="_blank"
-            className="text-white hover:text-white transition-colors duration-300"
-          >
-            <Image
-              src="/twitter.png"
-              width={18}
-              height={18}
-              alt="Twitter icon"
+          <div className="md:ml-4 relative">
+            <input
+              type="search"
+              className="h-10 pl-2 pr-8 rounded-lg text-sm focus:outline-none"
+              placeholder="Search for anything"
             />
-          </Link>
-          <Link
-            href="https://discord.com/invite/4eQBm7DDNS"
-            target="_blank"
-            className="text-white hover:text-white transition-colors duration-300"
-          >
-            <Image
-              src="/discord.png"
-              width={24}
-              height={24}
-              alt="Discord icon"
-            />
-          </Link>
+            <button className="absolute right-0 top-0 mt-3 mr-2">
+              {/* Insert search icon here */}
+            </button>
+          </div>
+          <ConnectWallet className="bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-700 ml-4 hover:text-white" />
         </div>
-      </nav>
-    </div>
+      </div>
+    </nav>
   );
 }

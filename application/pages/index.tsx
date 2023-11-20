@@ -6,6 +6,12 @@ import WalletConnection from "@/components/demo/WalletConnection";
 import UserAuthentication from "@/components/demo/UserAuthentication";
 import DecentralizedStorage from "@/components/demo/DecentralizedStorage";
 import ContractInteraction from "@/components/demo/ContractInteraction";
+import Head from "next/head";
+import styles from "../styles/Home.module.css";
+import CtaButton from "../components/CtaButton";
+import NFTGrid from "@/components/NFTGrid";
+import NewsletterSubscribe from "@/components/NewsletterSubscribe";
+import AboutDataLynk from "@/components/AboutDataLynk";
 
 const tabs = [
   { name: "Wallet Connection", component: <WalletConnection /> },
@@ -15,73 +21,49 @@ const tabs = [
 ];
 
 const Home: NextPage = () => {
-  const [activeTab, setActiveTab] = useState<typeof tabs[number]>(tabs[0]);
-
   return (
-    <div className="w-full mx-auto pr-8 pl-8 max-w-7xl relative pb-10 mt-32">
-      <h1 className="text-4xl font-extrabold tracking-tight lg:text-5xl mb-4">
-        EVM Kit{" "}
-        <span
-          className="text-4xl font-extrabold tracking-tight lg:text-5xl mb-4
-        text-gray-400
-        "
-        >
-          powered by thirdweb
-        </span>
-      </h1>
-      <p className="text-xl text-muted-foreground">
-        A collection of tools for Ethereum Virtual Machine (EVM) development.
-      </p>
-      <div className="flex flex-row items-center gap-4 pt-6 pb-16 ">
-        <Link
-          className={buttonVariants({ variant: "default" })}
-          href="https://docs.evmkit.com"
-          target="_blank"
-        >
-          Get Started
-        </Link>
+    <div className={styles.container}>
+      <Head>
+        <title>DataLynk</title>
+        <meta
+          name="description"
+          content="Connecting Data, Unlocking Potential"
+        />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
 
-        <Link
-          className={buttonVariants({ variant: "secondary" })}
-          href="https://github.com/jarrodwatts/evmkit"
-          target="_blank"
-        >
-          GitHub
-        </Link>
-      </div>
-
-      <div className="flex flex-col  md:flex-row w-full">
-        <div className="flex flex-col items-start justify-start w-full md:w-96 pr-8">
-          <h2 className="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight transition-colors mt-2">
-            What&rsquo;s Included?
-          </h2>
-          <p className="leading-7 mt-2">
-            Explore the features of EVM Kit below.
-          </p>
-
-          <div className="mb-4 flex flex-col items-start mt-4 flex-nowrap overflow-x-auto w-full md:w-60  ">
-            {tabs.map((tab) => (
-              <button
-                className={`w-full text-left pl-3 py-2 flex items-center pr-6 border-l-2 font-medium transition-colors duration-200 ${
-                  tab.name === activeTab.name
-                    ? "font-bold text-white lg:border-l-2 border-blue-500"
-                    : "text-gray-400 border-gray-700"
-                } hover:text-white`}
-                key={tab.name}
-                onClick={() => setActiveTab(tab)}
-              >
-                {tab.name}
+      <main className="text-center py-12 box-border">
+        <section className="bg-hero-gradient text-white py-24 px-4">
+          <div className="max-w-screen-xl mx-auto">
+            <h1 className="text-7xl font-bold mb-6">
+              Revolutionizing Data Exchange
+            </h1>
+            <p className="text-xl mb-8">
+              Facilitating Smarter Connections for a Data-Driven World,
+              Empowering Innovations in the Digital Age
+            </p>
+            <div className="flex justify-center gap-4 mt-8">
+              {/* Primary Button */}
+              <button className="bg-blue-700 text-white font-bold text-lg px-6 py-3 rounded hover:bg-blue-800 transition-colors duration-300">
+                Explore Marketplace
               </button>
-            ))}
+              {/* Secondary Button */}
+              <button className="bg-transparent text-blue-700 border border-blue-700 text-lg font-bold px-6 py-3 rounded hover:bg-blue-200 transition-colors duration-300">
+                Tokenize Your Data
+              </button>
+            </div>
           </div>
+        </section>
+
+        <AboutDataLynk />
+
+        <div className="flex justify-center items-center h-screen">
+          <NFTGrid />
         </div>
-        <div
-          className="border border-gray-700 rounded-lg flex-1 p-8 m-l-3 mt-4 lg:mt-0
-          h-96 overflow-y-auto"
-        >
-          {activeTab.component}
-        </div>
-      </div>
+      </main>
+      <footer className={styles.footer}>
+        <NewsletterSubscribe />
+      </footer>
     </div>
   );
 };

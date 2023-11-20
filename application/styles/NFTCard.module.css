@@ -1,0 +1,75 @@
+/* NFTCard.module.css */
+.card {
+  width: 300px;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative;
+}
+
+.discountBadge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #ff4081;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 0 0 8px 8px;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.category {
+  color: #007bff;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.price {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.title {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.addToCartButton,
+.buyNowButton {
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.addToCartButton {
+  background-color: #f0f0f0;
+}
+
+.buyNowButton {
+  background-color: #007bff;
+  color: white;
+}
+
+.addToCartButton:hover {
+  background-color: #e0e0e0;
+}
+
+.buyNowButton:hover {
+  background-color: #0056b3;
+}
