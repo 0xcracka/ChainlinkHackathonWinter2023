@@ -19,9 +19,9 @@ export function Nav() {
                 Home
               </span>
             </Link>
-            <Link href="/products" passHref>
+            <Link href="/marketplace" passHref>
               <span className="text-gray-800 hover:text-blue-600 cursor-pointer">
-                Products
+                Marketplace
               </span>
             </Link>
             <Link href="/about" passHref>
@@ -29,11 +29,11 @@ export function Nav() {
                 About
               </span>
             </Link>
-            <Link href="/pricing" passHref>
+            {/* <Link href="/pricing" passHref>
               <span className="text-gray-800 hover:text-blue-600 cursor-pointer">
                 Pricing
               </span>
-            </Link>
+            </Link> */}
           </div>
           <div className="md:ml-4 relative">
             <input
