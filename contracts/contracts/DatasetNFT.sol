@@ -43,7 +43,7 @@ contract DatasetNFT is ChainlinkClient, ERC721 {
         );
 
         // Set your API endpoint and datasetID
-        request.add("get", "http://your-api-endpoint");
+        request.add("get", "datalynk.vercel.app/api/validateDataset");
         request.add("path", "isValidated"); // JSON path in the API response
         request.add("datasetID", datasetID);
 
