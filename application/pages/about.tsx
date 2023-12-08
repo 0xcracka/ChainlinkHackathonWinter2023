@@ -1,7 +1,18 @@
-const about = () => {
+import React from "react";
+import Image from "next/image";
+
+const About = () => {
   return (
     <div>
-      <div className="bg-blue-500 py-12">
+      <div className="flex justify-center items-center mt-8 mb-8">
+        <Image
+          src="/images/DataLynk.png"
+          alt="About"
+          width={1080}
+          height={500}
+        />
+      </div>
+      <div className="bg-blue-500 py-12 wave-transition">
         <div className="container mx-auto px-4">
           <h1 className="text-3xl font-bold text-white mb-4">About</h1>
           <div className="mb-8">
@@ -19,7 +30,7 @@ const about = () => {
           </div>
         </div>
       </div>
-      <div className="bg-gray-200 py-12">
+      <div className="bg-gray-200 py-12 wave-transition">
         <div className="container mx-auto px-4">
           <h2 className="text-xl font-bold mb-2">
             2. Chainlink Oracle Integration
@@ -34,7 +45,7 @@ const about = () => {
           </p>
         </div>
       </div>
-      <div className="bg-blue-500 py-12">
+      <div className="bg-blue-500 py-12 wave-transition">
         <div className="container mx-auto px-4">
           <h2 className="text-xl font-bold text-white mb-2">
             3. Blockchain-Verified Data
@@ -51,4 +62,4 @@ const about = () => {
   );
 };
 
-export default about;
+export default About;

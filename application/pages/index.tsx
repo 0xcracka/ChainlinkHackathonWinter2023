@@ -8,6 +8,8 @@ import CtaButton from "../components/CtaButton";
 import NFTGrid from "@/components/NFTGrid";
 import NewsletterSubscribe from "@/components/NewsletterSubscribe";
 import AboutDataLynk from "@/components/AboutDataLynk";
+import Image from "next/image";
+import Wave from "@/components/Wave";
 
 const Home: NextPage = () => {
   return (
@@ -43,11 +45,18 @@ const Home: NextPage = () => {
             </div>
           </div>
         </section>
+        {/* create a divider for the homepage using tailwind css and dots/geometric shapes */}
+        <Wave />
 
         <AboutDataLynk />
+        <div>
+          <h2 className="text-3xl font-bold text-center text-gray-800 mb-5 ">
+            Featured Datasets
+          </h2>
 
-        <div className="flex justify-center items-center h-screen">
-          <NFTGrid />
+          <div className="flex justify-center items-center ">
+            <NFTGrid />
+          </div>
         </div>
       </main>
       <footer className={styles.footer}>

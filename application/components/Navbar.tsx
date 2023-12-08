@@ -7,11 +7,19 @@ export function Nav() {
   return (
     <nav className="bg-white shadow-md">
       <div className="container mx-auto px-6 py-3 flex justify-between items-center">
-        <Link href="/" passHref>
-          <span className="font-bold text-xl text-blue-600 cursor-pointer">
-            DataLynk
-          </span>
-        </Link>
+        <div className="flex items-center">
+          <Image
+            src="/images/DATALYNKLOGO.png"
+            alt="Logo"
+            width={24}
+            height={24}
+          />
+          <Link href="/" passHref>
+            <span className="font-bold text-xl text-blue-600 cursor-pointer ml-2">
+              DataLynk
+            </span>
+          </Link>
+        </div>
         <div className="flex items-center">
           <div className="hidden md:flex space-x-4">
             <Link href="/" passHref>

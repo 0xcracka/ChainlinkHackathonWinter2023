@@ -1,4 +1,6 @@
 import Image from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLink, faDatabase, faBrain } from "@fortawesome/free-solid-svg-icons";
 
 const AboutDataLynk = () => {
   return (
@@ -10,14 +12,11 @@ const AboutDataLynk = () => {
 
         <div className="grid md:grid-cols-3 gap-8 text-center">
           {/* Leveraging Chainlink Oracles */}
-          <div className="flex flex-col items-center p-4 bg-white rounded-lg shadow">
-            <Image
-              src="/chainlink-integration.jpg"
-              alt="Chainlink Integration"
-              width={200}
-              height={200}
-              className="mb-4 rounded"
-            />
+          <div className="flex flex-col items-center p-4 bg-white rounded-lg shadow text-center">
+            <div className="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mb-4">
+              <FontAwesomeIcon icon={faLink} size="1x" />
+            </div>
+
             <h3 className="text-xl font-semibold mb-2">
               Chainlink Oracle Integration
             </h3>
@@ -29,14 +28,10 @@ const AboutDataLynk = () => {
           </div>
 
           {/* Blockchain for Data Verification */}
-          <div className="flex flex-col items-center p-4 bg-white rounded-lg shadow">
-            <Image
-              src="/blockchain-technology.jpg"
-              alt="Blockchain Technology"
-              width={200}
-              height={200}
-              className="mb-4 rounded"
-            />
+          <div className="flex flex-col items-center p-4 bg-white rounded-lg shadow text-center">
+            <div className="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mb-4">
+              <FontAwesomeIcon icon={faDatabase} size="1x" />
+            </div>
             <h3 className="text-xl font-semibold mb-2">
               Blockchain-Verified Data
             </h3>
@@ -48,14 +43,10 @@ const AboutDataLynk = () => {
           </div>
 
           {/* AI Model Training */}
-          <div className="flex flex-col items-center p-4 bg-white rounded-lg shadow">
-            <Image
-              src="/ai-model-training.jpg"
-              alt="AI Model Training"
-              width={200}
-              height={200}
-              className="mb-4 rounded"
-            />
+          <div className="flex flex-col items-center p-4 bg-white rounded-lg shadow text-center">
+            <div className="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mb-4">
+              <FontAwesomeIcon icon={faBrain} size="1x" />
+            </div>
             <h3 className="text-xl font-semibold mb-2">
               Permissions for AI Training
             </h3>

@@ -10,7 +10,10 @@
     "deploy": "npx thirdweb@latest deploy"
   },
   "dependencies": {
-    "@thirdweb-dev/contracts": "^3"
+    "@chainlink/contracts": "^0.8.0",
+    "@openzeppelin/contracts": "^5.0.0",
+    "@thirdweb-dev/contracts": "^3",
+    "solidity": "^0.8.11"
   },
   "devDependencies": {
     "@ethersproject/abi": "^5.4.7",
