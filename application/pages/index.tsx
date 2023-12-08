@@ -10,6 +10,7 @@ import NewsletterSubscribe from "@/components/NewsletterSubscribe";
 import AboutDataLynk from "@/components/AboutDataLynk";
 import Image from "next/image";
 import Wave from "@/components/Wave";
+import React from "react";
 
 const Home: NextPage = () => {
   return (
