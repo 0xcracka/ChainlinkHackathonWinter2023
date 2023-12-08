@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink, faDatabase, faBrain } from "@fortawesome/free-solid-svg-icons";
+import React from "react";
 
 const AboutDataLynk = () => {
   return (
